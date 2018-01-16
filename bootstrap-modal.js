@@ -80,6 +80,9 @@ MyModal.prototype = {
 $.extend({
 	alert: function(message, title = '提示', options = null){
 		var myModal = new MyModal();
+		if(options == null){
+			options = myModal.default;
+		}
 		if(typeof(options.buttons) == 'undefined'){
 			options.buttons = myModal.default.buttons;
 		}
