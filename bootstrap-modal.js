@@ -33,10 +33,7 @@ MyModal.prototype = {
 				html += message;
 			  html += '</div>';
 			  html += '<div class="modal-footer">';
-				$.each(options.buttons, function(index, btn){
-					if(options.theme != 'modal-default'){
-						btn.class = 'btn btn-outline';
-					}
+				$.each(options.buttons, function(index, btn){					
 					if(btn.close){
 						html += '<button type="button" class="'+btn.class+'" data-dismiss="modal">'+btn.text+'</button>';
 					}else{
