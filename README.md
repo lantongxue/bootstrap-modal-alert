@@ -1,7 +1,8 @@
 # bootstrap-modal
 快速使用bootstrap模态框的插件
 # 简介
-> 基于 jquery bootstrap AdminLTE 所编写的快速弹出 Modal 插件
+
+基于 jquery bootstrap AdminLTE 所编写的快速弹出 Modal 插件
 
 默认使用了 AdminLTE 里面的 Modal 主题
 
