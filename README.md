@@ -7,3 +7,8 @@
 所以，如果要使用本插件里面的 theme 选项，需要配合 AdminLTE <br />
 当然，你也可以自定义主题，你只需要重写下面的任意一个样式<br />
 主题：modal-default modal-primary modal-info modal-warning modal-success modal-danger
+# 使用方式
+
+``` javascript
+$.alert("提示信息", "标题");
+```
