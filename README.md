@@ -10,5 +10,20 @@
 # 使用方式
 
 ``` javascript
-$.alert("提示信息", "标题");
+$.alert("提示信息", "标题", {theme: "modal-success"});
+```
+# buttons 配置
+
+``` javascript
+buttons: [
+			{
+				class: 'btn btn-default',  // 按钮样式
+				close: true, // 如果为true，下面的onclick则不生效
+				text: '关闭', // 按钮显示的文字
+				onclick : function(){}  // 回调函数
+			},
+      {
+        ...
+      }
+		]
 ```
