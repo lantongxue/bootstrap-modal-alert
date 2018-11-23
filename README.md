@@ -9,6 +9,4 @@
 主题：modal-default modal-primary modal-info modal-warning modal-success modal-danger
 # 使用方式
 
-``` javascript
-等待更新
-```
+https://lantongxue.github.io/AdminLTEDoc/
