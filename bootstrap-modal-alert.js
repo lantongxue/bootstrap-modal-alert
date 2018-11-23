@@ -15,11 +15,11 @@
             // 主题：modal-default modal-primary modal-info modal-warning modal-success modal-danger
             theme: 'modal-default',
             closeBtn: {
-                style: 'btn btn-outline',
+                style: 'btn btn-default',
                 text: '关闭'
             },
             okBtn: {
-                style: 'btn btn-outline',
+                style: 'btn btn-default',
                 close: true,
                 text: '确定'
             }
@@ -70,7 +70,7 @@
             var cid = '_modal_container_tmp_s' + Math.floor(Math.random()*100);
             var html = '';
             html += '<div id="'+id+'" class="modal '+this.options.theme+' fade" tabindex="-1" role="dialog">';
-            html += '<div class="modal-dialog" role="document">';
+            html += '<div class="modal-dialog">';
             html += '<div class="modal-content">';
             html += '<div class="modal-header">';
             html += '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
@@ -117,7 +117,7 @@
             var okBtn_id = '_myConfirmModal__okBtn_id' + Math.floor(Math.random()*100);
             var html = '';
             html += '<div id="'+id+'" class="modal '+this.options.theme+' fade" tabindex="-1" role="dialog">';
-            html += '<div class="modal-dialog" role="document">';
+            html += '<div class="modal-dialog">';
             html += '<div class="modal-content">';
             html += '<div class="modal-header">';
             html += '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
@@ -166,12 +166,9 @@
     };
     $.extend({
         bm:{
-            loading: function(message, options){
+            loading: function(message){
                 var myModal = new MyModal();
-                if(typeof options == 'undefined'){
-                    options = myModal.options;
-                }
-                return myModal.loading(message, options);
+                return myModal.loading(message);
             },
             alert: function(message, title, callback, options){
                 if(typeof title == 'undefined' || title === ''){
@@ -181,12 +178,12 @@
                     options = title;
                     title = '提示';
                 }
+                if(typeof callback == 'object'){
+                    options = callback;
+                }
                 if(typeof title == 'function'){
                     callback = title;
                     title = '提示';
-                }
-                if(typeof callback == 'object'){
-                    options = callback;
                 }
                 var myModal = new MyModal(options);
                 return myModal.alert(message, title, callback);
@@ -199,12 +196,12 @@
                     options = title;
                     title = '提示';
                 }
+                if(typeof callback == 'object'){
+                    options = callback;
+                }
                 if(typeof title == 'function'){
                     callback = title;
                     title = '提示';
-                }
-                if(typeof callback == 'object'){
-                    options = callback;
                 }
                 var myModal = new MyModal(options);
                 return myModal.confirm(message, title, callback, options);
